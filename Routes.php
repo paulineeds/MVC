@@ -2,6 +2,7 @@
 
 Route::set('index.php', function(){
   Index::CreateView('index');
+
 });
 
 Route::set('register.php', function(){
