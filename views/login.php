@@ -12,10 +12,10 @@
     <h1>Log in</h1>
 
     <label for="username"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="username" required>
+    <input type="text" placeholder="Enter Username" name="username">
 
     <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <input type="password" placeholder="Enter Password" name="psw">
 
     <button type="submit" class="loginBtn">Log in</button>
   </div>

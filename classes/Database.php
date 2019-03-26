@@ -14,8 +14,8 @@ class Database {
   public static function query($query, $params = array()) {
     $stmt = self::con()->prepare($query);
     $stmt->execute($params);
-    $data = $stmt->fetchAll();
-    return $data;
+    // $data = $stmt->fetchAll();
+    // return $data;
   }
 }
 ?>
