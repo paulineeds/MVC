@@ -1,18 +1,17 @@
 <?php
-if(!empty($_POST['username']) && !empty($_POST['password']))
-{
-    //set the username and password variables from the form
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+require_once('classes/DB.php');
 
-    //create sql string to retrieve the string from the database table "users"
-    $sql = "SELECT * FROM `users` WHERE username = '". addslashes($username) ."' AND password = '". md5('$password')."'";
-    $result = mysql_query($sql);
-        if (mysql_num_rows($result)>0) {
-            $return = "<font color=#008000><Center><b>**Successful Login**</b></Center></font>";
+if (isset($_POST['login'])) {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        if (DB::query('SELECT username FROM users WHERE username=:username', array(':username'=>$username))) {
+                if (password_verify($password, DB::query('SELECT password FROM users WHERE username=:username', array(':username'=>$username))[0]['password'])) {
+                        echo 'Logged in!';
+                } else {
+                        echo 'Incorrect Password!';
+                }
         } else {
-            $return = "<font color=#ff0000><Center><b>**Failed Login**</b></Center></font>";
+                echo 'User not registered!';
         }
-        print($return);
 }
 ?>
