@@ -1,19 +1,9 @@
+
 <?php
-require_once('classes/DB.php');
-if (isset($_POST['login'])) {
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-        if (DB::query('SELECT username FROM users WHERE username=:username', array(':username'=>$username))) {
-                if (password_verify($password, DB::query('SELECT password FROM users WHERE username=:username', array(':username'=>$username))[0]['password'])) {
-                        echo 'Logged in!';
-                } else {
-                        echo 'Incorrect Password!';
-                }
-        } else {
-                echo 'User not registered!';
-        }
-}
+
+require_once('./models/login.php')
 ?>
+
 <h1>Login to your account</h1>
 <form action="login.php" method="post">
 <input type="text" name="username" value="" placeholder="Username ..."><p />
