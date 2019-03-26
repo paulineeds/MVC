@@ -7,26 +7,24 @@
   <title>Register</title>
 </head>
 <body>
-  <form>
+
+<?php
+  require_once('./models/register.php');
+?>
+
+  <form method="POST" action="register.php">
   <div class="container">
     <h1>Register</h1>
     <p>Please fill in this form to create an account.</p>
 
-    <label for="username"><b>Username</b></label>
-    <input type="text" placeholder="Enter username" name="username" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-
-    <label for="psw-repeat"><b>Repeat Password</b></label>
-    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-
-    <button type="submit" class="registerbtn">Register</button>
-  </div>
+    <input type="text" name="username" value="" placeholder="Username ..."><br>
+<input type="password" name="password" value="" placeholder="Password ..."><br>
+<input type="email" name="email" value="" placeholder="someone@somesite.com"><br>
+<input type="submit" name="createaccount" value="Create Account">
+</form>
 
   <div class="container login">
     <p>Already have an account? <a href="login.php">Log in</a>.</p>
   </div>
-</form>
 </body>
 </html>

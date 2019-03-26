@@ -7,19 +7,17 @@
   <title>Log in</title>
 </head>
 <body>
-  <form>
-  <div class="container">
-    <h1>Log in</h1>
 
-    <label for="username"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="username" required>
+<?php
+  require_once('./models/login.php');
+?>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-
-    <button type="submit" class="loginBtn">Log in</button>
-  </div>
-
+<h1>Login to your account</h1>
+<form action="login.php" method="post">
+<input type="text" name="username" value="" placeholder="Username ..."><br>
+<input type="password" name="password" value="" placeholder="Password ..."><br>
+<input type="submit" name="login" value="Login">
 </form>
+
 </body>
 </html>
