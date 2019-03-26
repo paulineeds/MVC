@@ -1,12 +1,10 @@
 <?php
-require_once './classes/Database.php';
-if(isset($_POST['registerbtn'])) {
-  $username = $_POST['username'];
-  $password = $_POST['psw'];
-  $passwordRepeat = $_POST['psw-repeat'];
-
-  Database::query('INSERT INTO user VALUES(\'\',user_name, password,\'\')', array($username, $password));
-  echo 'succes' . $username . $password;
-};
-
+require_once('classes/DB.php');
+if (isset($_POST['createaccount'])) {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        $email = $_POST['email'];
+        DB::query('INSERT INTO users VALUES (:id , :username, :password, :email)', array('id'=>null,':username'=>$username, ':password'=>$password, ':email'=>$email));
+        echo "Success!";
+}
 ?>
