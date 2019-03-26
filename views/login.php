@@ -1,25 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Log in</title>
-</head>
-<body>
-  <form>
-  <div class="container">
-    <h1>Log in</h1>
-
-    <label for="username"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="username">
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw">
-
-    <button type="submit" class="loginBtn">Log in</button>
-  </div>
-
+<?php
+require_once('classes/DB.php');
+if (isset($_POST['login'])) {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        if (DB::query('SELECT username FROM users WHERE username=:username', array(':username'=>$username))) {
+                if (password_verify($password, DB::query('SELECT password FROM users WHERE username=:username', array(':username'=>$username))[0]['password'])) {
+                        echo 'Logged in!';
+                } else {
+                        echo 'Incorrect Password!';
+                }
+        } else {
+                echo 'User not registered!';
+        }
+}
+?>
+<h1>Login to your account</h1>
+<form action="login.php" method="post">
+<input type="text" name="username" value="" placeholder="Username ..."><p />
+<input type="password" name="password" value="" placeholder="Password ..."><p />
+<input type="submit" name="login" value="Login">
 </form>
-</body>
-</html>
