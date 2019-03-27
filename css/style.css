@@ -3,6 +3,8 @@ body {
   color: #B10F2E;
   font-family: 'Montserrat', sans-serif;
 }
+
+/* registration */
 .flex{
   display: flex;
   flex-direction: row;
@@ -65,4 +67,6 @@ h6 {
   font-weight: normal;
   font-size: 14px;
 }
+/* registration end */
 
+/* login */
