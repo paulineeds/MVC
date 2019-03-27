@@ -1,7 +1,7 @@
 
 
        <?php
-require_once('../classes/DB.php');
+require_once('./classes/DB.php');
 if (isset($_POST['login'])) {
         $username = $_POST['username'];
         $password = $_POST['password'];
