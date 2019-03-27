@@ -10,7 +10,7 @@
 <body>
 
 <?php
-  require_once('./models/login.php');
+  require_once('../models/login.php');
 ?>
 
 <h1>Login to your account</h1>
