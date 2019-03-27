@@ -8,7 +8,7 @@ body {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
-  margin-top: 90px;
+  margin-top: 90px; 
 }
 
 .containerreg{
@@ -20,6 +20,8 @@ body {
   border-right-width: 0.5px;
   border-width: 1px;
   color: black;
+  box-shadow: 7px 10px 41px -10px rgba(0,0,0,0.74);
+
 }
 
 .pic{
@@ -29,6 +31,7 @@ body {
   border-style: solid;
   border-left-width: 0.5px;
   border-width: 1px;
+  box-shadow: 7px 10px 41px -10px rgba(0,0,0,0.74);
 }
 
 .containerlogin {
@@ -43,7 +46,7 @@ input {
 }
 
 button {
-  
+
 }
 
 img {
