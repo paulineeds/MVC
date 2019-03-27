@@ -19,7 +19,7 @@
     <form method="POST" action="register.php">
       <div class="containerreg">
         <h1>Register</h1>
-        <p>Please fill in this form to create an account.</p>
+        <h6>Please fill in this form to create an account.</h6>
 
         <input type="text" name="username" value="" placeholder="Username ..."><br>
       <input type="password" name="password" value="" placeholder="Password ..."><br>
@@ -27,7 +27,7 @@
       <input type="submit" name="createaccount" value="Create Account">
     </form>
 
-    <div class="container login">
+    <div class="containerlogin">
       <p>Already have an account? <a href="login.php">Log in</a>.</p>
     </div>
     </div>
