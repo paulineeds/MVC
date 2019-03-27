@@ -1,5 +1,4 @@
 <?php
-
 class Register extends Controller {
   
   public static function doSomething() {
@@ -7,5 +6,4 @@ class Register extends Controller {
   }
   
 }
-
 ?>
