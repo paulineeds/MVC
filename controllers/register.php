@@ -1,8 +1,4 @@
 <?php
-<<<<<<< HEAD
-=======
-
->>>>>>> master
 class Register extends Controller {
   
   public static function doSomething() {
@@ -10,8 +6,4 @@ class Register extends Controller {
   }
   
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> master
 ?>

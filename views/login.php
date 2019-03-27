@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-
-<?php
-
-require_once('./models/login.php')
-=======
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,17 +10,10 @@ require_once('./models/login.php')
 
 <?php
   require_once('../models/login.php');
->>>>>>> master
 ?>
 
 <h1>Login to your account</h1>
 <form action="login.php" method="post">
-<<<<<<< HEAD
-<input type="text" name="username" value="" placeholder="Username ..."><p />
-<input type="password" name="password" value="" placeholder="Password ..."><p />
-<input type="submit" name="login" value="Login">
-</form>
-=======
 <input type="text" name="username" value="" placeholder="Username ..."><br>
 <input type="password" name="password" value="" placeholder="Password ..."><br>
 <input type="submit" name="login" value="Login">
@@ -34,4 +21,3 @@ require_once('./models/login.php')
 
 </body>
 </html>
->>>>>>> master
