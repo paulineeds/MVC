@@ -4,7 +4,7 @@
 
 
 <?php
-include('./classes/DB.php');
+include('classes/DB.php');
 function isLoggedIn() {
 
   //checks if the token can be found in DB/is valid
@@ -23,3 +23,5 @@ function isLoggedIn() {
           } else {
             echo 'Not logged in';
           }
+
+          ?>
