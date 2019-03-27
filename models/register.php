@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
 require_once('classes/DB.php');
+=======
+require_once('../classes/DB.php');
+>>>>>>> master
 if (isset($_POST['createaccount'])) {
         $username = $_POST['username'];
         $password = $_POST['password'];
