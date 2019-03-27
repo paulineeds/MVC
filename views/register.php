@@ -4,36 +4,20 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Register</title>
-    <link rel="stylesheet" type="text/css" href="/../css/style.css">
-
-    
-  </head>
-  <body>
-=======
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
   <title>Register</title>
   <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
 </head>
 <body>
 
-
->>>>>>> 7f7e0a6d48b664cee801ed9dc0bc29ba980fb559
-
-    <?php
-    require_once('./models/register.php');
-    ?>
-
+<h1> Somename </h1>
+<div class="flex">
     <form method="POST" action="register.php">
-      <div class="container">
+      <div class="containerreg">
         <h1>Register</h1>
         <p>Please fill in this form to create an account.</p>
 
@@ -46,5 +30,10 @@
     <div class="container login">
       <p>Already have an account? <a href="login.php">Log in</a>.</p>
     </div>
+    </div>
+    <div class="pic">
+      <img src="../css/pexels-photo-799443.jpeg" alt="">
+    </div>
+  </div>
   </body>
 </html>
