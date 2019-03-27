@@ -7,8 +7,8 @@ if (isset($_POST['login'])) {
                 if (password_verify($password, DB::query('SELECT password FROM users WHERE username=:username', array(':username'=>$username))[0]['password'])) {
                         echo 'Logged in!';
 
-                        $token = bin2hex(openssl_random_pseudo_bytes(64, true));
-
+                        $token = bin2hex(openssl_random_pseudo_bytes(64, $cstrong));
+                        echo $token;
                 } else {
                         echo 'Incorrect Password!';
                 }
