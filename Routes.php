@@ -1,15 +1,15 @@
 <?php
 
-Route::set('index.php', function(){
+Route::set('views/index.php', function(){
   Index::CreateView('index');
 
 });
 
-Route::set('register.php', function(){
+Route::set('views/register.php', function(){
   Register::CreateView('register');
 });
 
-Route::set('login.php', function(){
+Route::set('views/login.php', function(){
   Login::CreateView('login');
 });
 
