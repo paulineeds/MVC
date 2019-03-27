@@ -1,3 +1,7 @@
+<?php
+  require_once('../models/login.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,11 +12,6 @@
   <title>Log in</title>
 </head>
 <body>
-
-<?php
-  require_once('../models/login.php');
-?>
-
 <h1>Login to your account</h1>
 <form action="login.php" method="post">
 <input type="text" name="username" value="" placeholder="Username ..."><br>

@@ -14,4 +14,11 @@
     }
   }); 
   require_once('Routes.php');
+
+  if(Login::isLoggedIn()) {
+    echo 'Logged In';
+    echo Login::isLogedIn();
+  } else { 
+    echo 'Not logged in';
+  }
  ?>
