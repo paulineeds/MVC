@@ -12,9 +12,6 @@
   <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
-
-
-
   <form method="POST" action="register.php">
   <div class="container">
     <h1>Register</h1>
