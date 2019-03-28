@@ -8,7 +8,7 @@ if (Login::isLoggedIn()) {
                 $newpasswordrepeat = $_POST['newpasswordrepeat'];
                 $userid = Login::isLoggedIn();
 
-                
+
                 if (password_verify($oldpassword, DB::query('SELECT password FROM users WHERE id=:userid', array(':userid'=>$userid))[0]['password'])) {
                         if ($newpassword == $newpasswordrepeat) {
                                 if (strlen($newpassword) >= 6 && strlen($newpassword) <= 60) {
