@@ -36,6 +36,17 @@ if (isLoggedIn()) {
         echo 'Not logged in';
 }
 
+///
+$showTimeline = False;
+if (Login::isLoggedIn()) {
+        $userid = Login::isLoggedIn();
+        $showTimeline = True;
+} else {
+        echo 'Not logged in';
+}
+if (isset($_GET['postid'])) {
+        Post::likePost($_GET['postid'], $userid);
+}
 
                         ?>
                 
