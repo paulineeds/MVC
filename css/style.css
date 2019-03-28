@@ -92,6 +92,23 @@ h6 {
 
 /* login */
 
-.containerlog{
+.logincontainer {
+  margin-top: 90px;
+  text-align: center;
+  width: 300px;
+  height: 400px;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  color: black;
+  box-shadow: 7px 10px 41px -10px rgba(0,0,0,0.74);
+}
 
+.loginform {
+  margin-top: 50px;
+}
+.fas {
+  font-size: 50px;
+  color:grey;
+  margin-top: 20px;
 }
