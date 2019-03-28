@@ -13,25 +13,25 @@ if (isset($_POST['createaccount'])) {
                                         if (!DB::query('SELECT email FROM users WHERE email=:email', array(':email'=>$email))) {
                                                 DB::query('INSERT INTO users VALUES (\'\', :username, :password, :email)', array(':username'=>$username, ':password'=>password_hash($password, PASSWORD_BCRYPT), ':email'=>$email));
                                                 echo "Success!";
-
                                         } else {
                                                 echo 'Email in use!';
                                         }
-                                } else {
-                                                echo 'Invalid email!';
-                                        }
-                                } else {
-                                        echo 'Invalid password!';
+        } else {
+                echo 'Email in use!';
+        }
+         } else {
+                                        echo 'Invalid email!';
                                 }
-                                } else {
-                                        echo 'Invalid username';
-                                }
+                        } else {
+                                echo 'Invalid password!';
+                        }
                         } else {
                                 echo 'Invalid username';
                         }
                 } else {
-                        echo 'User already exists!';
+                        echo 'Invalid username';
                 }
+        } else {
+                echo 'User already exists!';
         }
-
 ?>
