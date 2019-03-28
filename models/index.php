@@ -4,8 +4,8 @@
 
 
 <?php
-include('classes/DB.php');
-include('classes/login.php');
+include('../classes/DB.php');
+include('../classes/login.php');
 
 function isLoggedIn() {
         if (isset($_COOKIE['SNID'])) {
