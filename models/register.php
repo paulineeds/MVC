@@ -16,24 +16,21 @@ if (isset($_POST['createaccount'])) {
                                         } else {
                                                 echo 'Email in use!';
                                         }
-
-        } else {
-                echo 'Email in use!';
-        }
-         } else {
-                                        echo 'Invalid email!';
+                                } else {
+                                                echo 'Invalid email!';
+                                        }
+                                } else {
+                                        echo 'Invalid password!';
                                 }
-                        } else {
-                                echo 'Invalid password!';
-                        }
+                                } else {
+                                        echo 'Invalid username';
+                                }
                         } else {
                                 echo 'Invalid username';
                         }
                 } else {
-                        echo 'Invalid username';
+                        echo 'User already exists!';
                 }
-        } else {
-                echo 'User already exists!';
         }
 
 ?>
