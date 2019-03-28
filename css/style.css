@@ -7,10 +7,16 @@ body {
 /* registration */
 .flex{
   display: flex;
+  justify-content: space-around;
+}
+
+.flexnog {
+  display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
-  margin-top: 90px; 
+  margin-top: 90px;
+  box-shadow: 7px 10px 41px -10px rgba(0,0,0,0.74);
 }
 
 .containerreg{
@@ -22,7 +28,7 @@ body {
   border-right-width: 0.5px;
   border-width: 1px;
   color: black;
-  box-shadow: 7px 10px 41px -10px rgba(0,0,0,0.74);
+  /* box-shadow: 7px 10px 41px -10px rgba(0,0,0,0.74); */
 
 }
 
@@ -33,7 +39,7 @@ body {
   border-style: solid;
   border-left-width: 0.5px;
   border-width: 1px;
-  box-shadow: 7px 10px 41px -10px rgba(0,0,0,0.74);
+  /* box-shadow: 7px 10px 41px -10px rgba(0,0,0,0.74); */
 }
 
 .containerlogin {
@@ -45,10 +51,25 @@ input {
   margin: 3px;
   padding: 3px;
   width: 150px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: #E6E8E6;
+  border-color: #B10F2E;
+  border-bottom-width: 1px;
 }
 
-button {
+input:focus {
+  outline: none;
+}
 
+.button {
+margin-top: 10px;
+border-color: #B10F2E;
+border-style: solid;
+border-width: 1px;
+margin-right: 0px;
+margin-left: 0px;
 }
 
 img {
@@ -72,5 +93,5 @@ h6 {
 /* login */
 
 .containerlog{
-  
+
 }
