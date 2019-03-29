@@ -51,7 +51,7 @@ if (isset($_GET['username'])) {
                                 die('Incorrect length!');
                         }
                         if ($loggedInUserId == $userid) {
-                                DB::query('INSERT INTO posts VALUES (null, :postbody, NOW(), :userid, 0)', array(':postbody'=>$postbody, ':userid'=>$userid));
+                                DB::query('INSERT INTO posts VALUES (\'\', :postbody, NOW(), :userid, 0)', array(':postbody'=>$postbody, ':userid'=>$userid));
                         } else {
                                 die('Incorrect user!');
                         }
