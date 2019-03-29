@@ -60,7 +60,7 @@ if (isset($_GET['username'])) {
                                         if ($followerid == 6) {
                                                 DB::query('UPDATE users SET verified=1 WHERE id=:userid', array(':userid'=>$userid));
                                         }
-                                        DB::query('INSERT INTO followers VALUES (\'\', :userid, :followerid)', array(':userid'=>$userid, ':followerid'=>$followerid));
+                                        DB::query('INSERT INTO followers VALUES (null, :userid, :followerid)', array(':userid'=>$userid, ':followerid'=>$followerid));
                                 } else {
                                         echo 'Already following!';
                                 }
@@ -89,7 +89,7 @@ if (isset($_GET['username'])) {
                                 die('Incorrect length!');
                         }
                         if ($loggedInUserId == $userid) {
-                                DB::query('INSERT INTO posts VALUES (\'\', :postbody, NOW(), :userid, 0)', array(':postbody'=>$postbody, ':userid'=>$userid));
+                                DB::query('INSERT INTO posts VALUES (null, :postbody, NOW(), :userid, 0)', array(':postbody'=>$postbody, ':userid'=>$userid));
                         } else {
                                 die('Incorrect user!');
                         }
