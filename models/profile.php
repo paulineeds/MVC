@@ -42,9 +42,10 @@ if (isset($_GET['username'])) {
 <?php
 
 require_once('../classes/Login.php');
+require_once('../classes/DB.php');
 
 
-$username = "";
+$username = "Domi";
 $verified = False;
 $isFollowing = False;
 
